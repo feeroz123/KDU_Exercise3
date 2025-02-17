@@ -1,5 +1,8 @@
 package base;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -9,8 +12,11 @@ import java.time.Duration;
 
 public class BaseTest {
 
+    WebDriver local_driver;
+    ExtentReports extent;
+    ExtentTest test;
+
     public WebDriver launch_browser(String browser_type) {
-        WebDriver local_driver;
 
         switch (browser_type.toLowerCase()) {
 
@@ -35,6 +41,21 @@ public class BaseTest {
         local_driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
         return local_driver;
+    }
+    // Initialize ExtentReports
+    public void initExtentReports(String reportName) {
+        extent = new ExtentReports();
+        ExtentSparkReporter sparkReporter = new ExtentSparkReporter("ExtentReports/" + reportName + ".html");
+        extent.attachReporter(sparkReporter);
+        extent.setSystemInfo("Project Name", "blazedemo");
+        extent.setSystemInfo("Organisation", "KickdrumTech");
+    }
+
+    // Close ExtentReports
+    public void flushExtentReports() {
+        if (extent != null) {
+            extent.flush();
+        }
     }
 
 }

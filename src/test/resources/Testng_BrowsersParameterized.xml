@@ -1,0 +1,10 @@
+<suite name="BrowserStackDemoTest-CrossBrowser">
+    <test name="Exercise2ChromeTest" preserve-order="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+
+            <class name="base.FlightsSearchResultsTest"/>
+
+        </classes>
+    </test>
+</suite>

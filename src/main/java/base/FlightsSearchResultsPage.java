@@ -16,11 +16,12 @@ public class FlightsSearchResultsPage {
     private static final Logger logger = LogManager.getLogger(FlightsSearchResultsPage.class);
 
 
-    @FindBy(xpath = "//table[@class='table']/tbody/tr/td[1]/input")
+    @FindBy(xpath = "//table[contains(@class, 'table')]//tbody//tr//td[1]//input")
     List<WebElement> chooseFlightButtons;
 
-    @FindBy(xpath = "//table[@class='table']/tbody/tr")
+    @FindBy(xpath = "//table[contains(@class, 'table')]//tbody//tr")
     List<WebElement> flightRows;
+
 
     public FlightsSearchResultsPage(WebDriver driver) {
         this.driver = driver;
@@ -44,6 +45,8 @@ public class FlightsSearchResultsPage {
             flightDetails.put("Departure Time", rowCells.get(3).getText());
             flightDetails.put("Arrival Time", rowCells.get(4).getText());
             flightDetails.put("Price", rowCells.get(5).getText());
+        } else {
+            logger.warn("Not enough flights available for Requested row: " + rowIndex);
         }
         return flightDetails;
     }
@@ -52,14 +55,6 @@ public class FlightsSearchResultsPage {
         if (flightRows.size() >= rowIndex) {
             WebElement selectedRow = flightRows.get(rowIndex - 1);
             List<WebElement> rowCells = selectedRow.findElements(org.openqa.selenium.By.tagName("td"));
-
-            logger.info("Flight Details (Row " + rowIndex + ")");
-            logger.info("Flight: " + rowCells.get(1).getText());
-            logger.info("Airline: " + rowCells.get(2).getText());
-            logger.info("Departure Time: " + rowCells.get(3).getText());
-            logger.info("Arrival Time: " + rowCells.get(4).getText());
-            logger.info("Price: " + rowCells.get(5).getText());
-
             chooseFlightButtons.get(rowIndex - 1).click();
             logger.info("Flight in row " + rowIndex + " selected!");
         } else {

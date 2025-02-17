@@ -16,9 +16,10 @@ public class FlightsSearchResultsPage {
     private static final Logger logger = LogManager.getLogger(FlightsSearchResultsPage.class);
 
 
-    @FindBy(xpath = "//table[contains(@class, 'table')]//tbody//tr//td[1]//input")
+    @FindBy(xpath = "//input[@value='Choose This Flight']")
     List<WebElement> chooseFlightButtons;
 
+    // Locating all rows in the flight results table
     @FindBy(xpath = "//table[contains(@class, 'table')]//tbody//tr")
     List<WebElement> flightRows;
 

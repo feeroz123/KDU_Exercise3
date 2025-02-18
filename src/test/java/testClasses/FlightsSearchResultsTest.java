@@ -32,6 +32,7 @@ public class FlightsSearchResultsTest extends BaseTest {
         driver.manage().window().maximize();
         driver.get(baseUrl);
         flightsSearchResultsPage = new FlightsSearchResultsPage(driver);
+        flightBookingPage = new FlightBookingPage(driver);
     }
 
     @Test
@@ -44,33 +45,34 @@ public class FlightsSearchResultsTest extends BaseTest {
         if (flightsDisplayed) {
             test.log(Status.PASS, "Flights are displayed on the page.");
             logger.info("Flights are available.");
-        } else {
-            test.log(Status.FAIL, "Flights are NOT displayed on the page.");
-            logger.error("No flights found");
-            Assert.fail("No flights found!");
-        }
 
-        test.log(Status.INFO, "Fetching details of the 4th flight.");
-        selectedFlightDetails = flightsSearchResultsPage.getFlightDetails(4);
+            test.log(Status.INFO, "Fetching details of the 4th flight.");
+            selectedFlightDetails = flightsSearchResultsPage.getFlightDetails(4);
 
-        if (!selectedFlightDetails.isEmpty()) {
-            for (Map.Entry<String, String> entry : selectedFlightDetails.entrySet()) {
-                test.log(Status.INFO, entry.getKey() + ": " + entry.getValue());
-                logger.info(entry.getKey() + ": " + entry.getValue());
+            if (!selectedFlightDetails.isEmpty()) {
+                for (Map.Entry<String, String> entry : selectedFlightDetails.entrySet()) {
+                    logger.info(entry.getKey() + ": " + entry.getValue());
+                }
+
+                // Move the flight selection inside the success condition
+                flightsSearchResultsPage.selectFlightByRow(4);
+                test.log(Status.PASS, "Successfully selected the 4th flight.");
+                logger.info("Successfully selected the 4th flight.");
+            } else {
+                test.log(Status.WARNING, "Could not retrieve flight details.");
+                logger.warn("Flight details are empty.");
             }
         } else {
-            test.log(Status.WARNING, "Could not retrieve flight details");
+            test.log(Status.FAIL, "Flights are NOT displayed on the page.");
+            logger.error("No flights found.");
+            Assert.fail("No flights found!");
         }
-
-        flightsSearchResultsPage.selectFlightByRow(4);
-        test.log(Status.PASS, "Successfully selected the 4th flight.");
-        logger.info("Successfully selected the 4th flight.");
     }
+
 
     @Test(priority = 2, dependsOnMethods = "testSelectAnyFlight")
     public void testVerifyBookingDetails() {
         test = extent.createTest("Verify Booking Details Test", "Verify flight details on booking page");
-        flightBookingPage = new FlightBookingPage(driver);
 
         if (selectedFlightDetails == null || selectedFlightDetails.isEmpty()) {
             test.log(Status.FAIL, "Selected flight details are missing. Cannot proceed with verification.");
@@ -86,10 +88,6 @@ public class FlightsSearchResultsTest extends BaseTest {
         expectedDetails.put("Airline", selectedFlightDetails.get("Airline").trim());
         expectedDetails.put("Flight Number", selectedFlightDetails.get("Flight").trim());
         expectedDetails.put("Price", selectedFlightDetails.get("Price").trim());
-
-        test.log(Status.INFO, "Expected Flight Details: " + expectedDetails);
-        test.log(Status.INFO, "Actual Flight Details from Booking Page: " + displayedFlightDetails);
-
         logger.info("Expected Flight Details: " + expectedDetails);
         logger.info("Actual Flight Details from Booking Page: " + displayedFlightDetails);
 

@@ -1,0 +1,75 @@
+22:28:16.667 INFO  blaszeDemoHome -Application is launched in the browser
+22:28:16.817 DEBUG blaszeDemoHome -Welcome to the Simple Travel Agency! is Heading
+22:28:16.867 DEBUG blaszeDemoHome -Find flight button is present in the blazedemo indexpage
+22:28:16.867 INFO  blaszeDemoHome -Home Page verified
+22:28:16.884 DEBUG blaszeDemoHome -Application URL is successfully verified
+22:28:20.045 INFO  blazeDemoBase -Application is launched in the browser
+22:28:20.117 INFO  blazeDemoConfirmation -11 /2018 is displayed as confirmation message
+22:28:20.150 INFO  basePage -Flight ID is displayed.
+22:28:20.166 DEBUG blazeDemoConfirmation -1739811499276 is the confirmationID
+22:28:20.191 INFO  basePage -Flight Status is displayed.
+22:28:20.217 DEBUG blazeDemoConfirmation -PendingCaptureis the status
+22:28:20.238 INFO  basePage -Flight Amount is displayed.
+22:28:20.250 DEBUG blazeDemoConfirmation -555 USDis the Flight Amount
+22:28:20.270 INFO  basePage -Flight Expiration is displayed.
+22:28:20.292 DEBUG blazeDemoConfirmation -555 USDis the Flight Expiration
+22:28:20.309 INFO  basePage -Flight AutoCode is displayed.
+22:28:20.332 DEBUG blazeDemoConfirmation -888888is the Flight auto code
+22:28:20.352 INFO  basePage -Flight Date is displayed.
+22:28:20.376 DEBUG blazeDemoConfirmation -Mon, 17 Feb 2025 16:58:19 +0000is the Flight Date
+23:05:31.729 INFO  blaszeDemoHome -Application is launched in the browser
+23:05:32.649 DEBUG blaszeDemoHome -Welcome to the Simple Travel Agency! is Heading
+23:05:32.681 DEBUG blaszeDemoHome -Find flight button is present in the blazedemo indexpage
+23:05:32.681 INFO  blaszeDemoHome -Home Page verified
+23:05:32.693 DEBUG blaszeDemoHome -Application URL is successfully verified
+23:05:36.301 INFO  blazeDemoBase -Application is launched in the browser
+23:05:36.402 INFO  blazeDemoConfirmation -11 /2018 is displayed as confirmation message
+23:05:36.452 INFO  basePage -Flight ID is displayed.
+23:05:36.478 DEBUG blazeDemoConfirmation -1739813735562 is the confirmationID
+23:05:36.510 INFO  basePage -Flight Status is displayed.
+23:05:36.535 DEBUG blazeDemoConfirmation -PendingCaptureis the status
+23:05:36.567 INFO  basePage -Flight Amount is displayed.
+23:05:36.583 DEBUG blazeDemoConfirmation -555 USDis the Flight Amount
+23:05:36.602 INFO  basePage -Flight Expiration is displayed.
+23:05:36.628 DEBUG blazeDemoConfirmation -11 /2018is the Flight Expiration
+23:05:36.652 INFO  basePage -Flight AutoCode is displayed.
+23:05:36.665 DEBUG blazeDemoConfirmation -888888is the Flight auto code
+23:05:36.691 INFO  basePage -Flight Date is displayed.
+23:05:36.707 DEBUG blazeDemoConfirmation -Mon, 17 Feb 2025 17:35:35 +0000is the Flight Date
+23:10:26.579 INFO  blaszeDemoHome -Application is launched in the browser
+23:10:26.686 DEBUG blaszeDemoHome -Welcome to the Simple Travel Agency! is Heading
+23:10:26.721 DEBUG blaszeDemoHome -Find flight button is present in the blazedemo indexpage
+23:10:26.721 INFO  blaszeDemoHome -Home Page verified
+23:10:26.730 DEBUG blaszeDemoHome -Application URL is successfully verified
+23:10:31.099 INFO  blazeDemoBase -Application is launched in the browser
+23:10:31.212 INFO  blazeDemoConfirmation -11 /2018 is displayed as confirmation message
+23:10:31.272 INFO  basePage -Flight ID is displayed.
+23:10:31.312 DEBUG blazeDemoConfirmation -1739814028841 is the confirmationID
+23:10:31.365 INFO  basePage -Flight Status is displayed.
+23:10:31.394 DEBUG blazeDemoConfirmation -PendingCaptureis the status
+23:10:31.426 INFO  basePage -Flight Amount is displayed.
+23:10:31.462 DEBUG blazeDemoConfirmation -555 USDis the Flight Amount
+23:10:31.504 INFO  basePage -Flight Expiration is displayed.
+23:10:31.551 DEBUG blazeDemoConfirmation -11 /2018is the Flight Expiration
+23:10:31.598 INFO  basePage -Flight AutoCode is displayed.
+23:10:31.630 DEBUG blazeDemoConfirmation -888888is the Flight auto code
+23:10:31.678 INFO  basePage -Flight Date is displayed.
+23:10:31.697 DEBUG blazeDemoConfirmation -Mon, 17 Feb 2025 17:40:28 +0000is the Flight Date
+23:24:28.423 INFO  basePage -Flight ID is displayed.
+23:24:28.468 INFO  basePage -Flight Status is displayed.
+23:24:28.512 INFO  basePage -Flight Amount is displayed.
+23:24:28.549 INFO  basePage -Flight Expiration is displayed.
+23:24:28.612 INFO  basePage -Flight AutoCode is displayed.
+23:24:28.677 INFO  basePage -Flight Date is displayed.
+23:30:54.459 INFO  basePage -Flight ID is displayed.
+23:30:54.499 INFO  basePage -Flight Status is displayed.
+23:30:54.549 INFO  basePage -Flight Amount is displayed.
+23:30:54.569 INFO  basePage -Flight Expiration is displayed.
+23:30:54.597 INFO  basePage -Flight AutoCode is displayed.
+23:30:54.634 INFO  basePage -Flight Date is displayed.
+23:36:13.602 INFO  basePage -Flight ID is displayed.
+23:36:13.637 INFO  basePage -Flight Status is displayed.
+23:36:13.660 INFO  basePage -Flight Amount is displayed.
+23:36:13.686 INFO  basePage -Flight Expiration is displayed.
+23:36:13.713 INFO  basePage -Flight AutoCode is displayed.
+23:36:13.743 INFO  basePage -Flight Date is displayed.

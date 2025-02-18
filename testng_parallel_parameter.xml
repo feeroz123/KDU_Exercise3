@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <test name="Chrome Test" preserve-order="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="blazeDemo.blaszeDemoHome"/>
+            <class name="blazeDemo.blazeDemoConfirmation"/>
+        </classes>
+    </test>
+</suite>
